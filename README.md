@@ -15,15 +15,20 @@
 |
 |———preview     // 组件（预览）测试目录
 |
+|
 |          |————index.js    // vui-m 库入口文件
 |          |
 |          |————components  // vui-m 组件开发目录
 |          |
-|———src————|————mixins
+|———src————|————mixins     // mixins
 |          |
 |          |————styles     // 公共样式及单页面抽离出的样式
 |          |
 |          |————utils      // 公用方法
+|
+|
+|———npmPublish  // 发布 npm 包 所需文件
+|
 |
 |———static      // 静态文件
 |
