@@ -44,7 +44,7 @@ module.exports = {
     // Paths
     entryPath: path.resolve(__dirname, '../src/index.js'),
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: '',
+    assetsSubDirectory: 'dist',
     assetsPublicPath: '/',
 
     /**

@@ -1,11 +1,16 @@
 <template lang="pug">
 	section
-		Header
+		Test(:txt="value")
 </template>
 
 <script>
 export default {
 	name: 'demo',
+	data () {
+		return {
+			value: '父组件动态传值'
+		}
+	},
 	mounted () {
 
 	},

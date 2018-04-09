@@ -9,6 +9,7 @@ const path = require('path')
 const chalk = require('chalk')
 const webpack = require('webpack')
 const config = require('../config')
+const shell = require('shelljs')
 const webpackConfig = require('./webpack.prod.conf')
 
 const spinner = ora('building for production...')
@@ -31,6 +32,8 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
       console.log(chalk.red('  Build failed with errors.\n'))
       process.exit(1)
     }
+
+    shell.cp('-R', './npmPublish/*', config.build.assetsRoot)
 
     console.log(chalk.cyan('  Build complete.\n'))
     console.log(chalk.yellow(

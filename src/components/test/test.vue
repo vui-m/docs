@@ -1,13 +1,13 @@
 <template lang="pug">
 	section
-		span header 组件： {{test}}
+		span Test 组件 {{txt}}
 </template>
 
 <script>
 export default {
-	name: 'Header',
+	name: 'Test',
 	props: {
-		test: {
+		txt: {
 			type: String,
 			default: '默认值'
 		}

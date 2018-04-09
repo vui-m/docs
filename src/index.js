@@ -1,8 +1,8 @@
-import Header from './components/header'
+import Test from './components/test'
 
 
 const components = {
-	Header,
+	Test,
 }
 
 const vui = {
@@ -13,7 +13,7 @@ const install = function (Vue, opt = {}) {
 	if (install.installed) return
 
 	Object.keys(vui).forEach(key => {
-		Vue.component(key, vui[key])
+		Vue.component(vui[key]['name'], vui[key])
 	})
 }
 
