@@ -1,5 +1,6 @@
 >## vui-m
-### A high quality UI Toolkit built on Vue.js.
+### A high quality UI Toolkit built on Vue 2.x.
+
 
 >#### 目录结构
 ```
