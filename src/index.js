@@ -1,5 +1,5 @@
 import Test from './components/test'
-
+import Toast from './components/toast'
 
 const components = {
 	Test,
@@ -15,6 +15,8 @@ const install = function (Vue, opt = {}) {
 	Object.keys(vui).forEach(key => {
 		Vue.component(vui[key]['name'], vui[key])
 	})
+
+	Vue.$toast = Vue.prototype.$toast = Toast
 }
 
 // auto install

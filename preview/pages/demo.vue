@@ -1,6 +1,8 @@
 <template lang="pug">
 	section
-		Test(:txt="value")
+		div(id="demo")
+			button(@click="showToast") 显示 toast
+		//- Test(:txt="value")
 </template>
 
 <script>
@@ -12,7 +14,15 @@ export default {
 		}
 	},
 	mounted () {
-
+		// console.log('demo.vue')
+	},
+	methods: {
+		showToast () {
+			this.$toast({
+				// position: 'top',
+				message: 'toast 轻提示！'
+			})
+		},
 	},
 }
 </script>
