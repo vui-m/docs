@@ -1,8 +1,12 @@
 import Test from './components/test'
 import Toast from './components/toast'
+import Swipe from './components/swipe'
+import SwipeItem from './components/swipe-item'
 
 const components = {
 	Test,
+	Swipe,
+	SwipeItem,
 }
 
 const vui = {

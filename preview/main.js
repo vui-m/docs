@@ -6,6 +6,9 @@ import Vuim from 'src/index.js'
 import App from './App'
 import RouterConfig from './router'
 
+// import globle css
+import 'src/styles/reset.styl'
+
 Vue.use(Router)
 Vue.use(Vuim)
 
