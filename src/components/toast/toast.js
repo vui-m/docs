@@ -17,9 +17,9 @@ ToastConstructor.prototype.close = (instance) => {
 }
 
 const getInstance = () => {
-	if (toastPool.length > 0) {
-		return toastPool.shift()
-	}
+	// if (toastPool.length > 0) {
+	// 	return toastPool.shift()
+	// }
 	return new ToastConstructor().$mount(document.createElement('div'))
 }
 

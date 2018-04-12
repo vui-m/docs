@@ -5,6 +5,14 @@
 </template>
 
 <script>
+// README.md
+
+/*  this.$toast('String')
+	this.$toast({
+		position: 'top | bottom | middle(default)',
+		message: 'String',
+}) */
+
 export default {
 	name: 'Toast',
 	data () {
@@ -13,7 +21,6 @@ export default {
 		}
 	},
 	mounted () {
-		// console.log('demo.vue')
 	},
 	methods: {
 		showToast () {
