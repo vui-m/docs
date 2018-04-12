@@ -1,11 +1,12 @@
 <template lang="pug">
 	section
-		Test(:txt="value")
+		div
+			button(@click="showToast") 显示 toast
 </template>
 
 <script>
 export default {
-	name: 'demo',
+	name: 'Toast',
 	data () {
 		return {
 			value: '父组件动态传值'
@@ -15,13 +16,19 @@ export default {
 		// console.log('demo.vue')
 	},
 	methods: {
-
+		showToast () {
+			this.$toast({
+				// position: 'top',
+				message: 'toast 轻提示！'
+			})
+		},
 	},
 }
 </script>
 
 <style lang="stylus" scoped>
-	span
-		color: red
-		font-size 30px
+	button
+		color: blue
+		font-size: 20px
+		outline: none
 </style>

@@ -1,10 +1,10 @@
 <template lang="pug">
-	transition
-		section.toast__container
-			span.toast__message(
+	transition(name="vui-toast-pop")
+		section.toast__container(
 				v-show="visible"
 				:class="msgPostion"
-			) {{message}}
+			) 
+			span.toast__message {{message}}
 </template>
 
 <script>
@@ -47,18 +47,17 @@ export default {
 
 <style lang="stylus" scoped>
 .toast__container
-	.toast__message
-		position: fixed
-		max-width: 90%
-		background: rgba(0, 0, 0, 0.7)
-		z-index: 9999
-		border-radius: 4px
-		color: #fff
-		text-align: center
-		transition: opacity .26s linear
+	position: fixed
+	max-width: 90%
+	background: rgba(0, 0, 0, 0.7)
+	z-index: 9999
+	border-radius: 4px
+	color: #fff
+	text-align: center
+	transition: opacity .3s linear
 
-.toast__message
-	padding: 4px 7px
+.toast__container
+	padding: 5px 7px
 
 .toast__position__top
 	left: 50%
@@ -74,5 +73,8 @@ export default {
 	left: 50%
 	bottom: 10vh
 	transform: translate(-50%, 0)
+
+.vui-toast-pop-enter, .vui-toast-pop-leave-to
+	opacity: 0
 </style>
 

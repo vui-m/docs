@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 const config = [
 	{ path: '/demo', name: 'demo' },
+	{ path: '/toast', name: 'toast' },
 ]
 
 const routes = [

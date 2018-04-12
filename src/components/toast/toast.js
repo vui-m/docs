@@ -13,8 +13,7 @@ let removeDom = () => {
 
 ToastConstructor.prototype.close = (instance) => {
 	instance.visible = false
-	// removeDom()
-	// this.$el.addEventListener('transitionend', removeDom);
+	instance.$el.addEventListener('transitionend', removeDom)
 }
 
 const getInstance = () => {
