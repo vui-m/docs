@@ -9,10 +9,12 @@ import Swipe from 'root/static/js/swipe'
 export default {
 	name: 'Swipe',
 	props: {
+		// 索引位置 Swipe 开始位置
 		startSlide: {
 			type: Number,
-			default: 1,
+			default: 0,
 		},
+		// Swipe 切换速度
 		speed: {
 			type: Number,
 			default: 400,
@@ -21,18 +23,31 @@ export default {
 			type: Number,
 			default: 3000,
 		},
+		// 无限循环
 		continuous: {
+			type: Boolean,
+			default: false,
+		},
+		// 停止对该容器的任何触摸滚动页面
+		disableScroll: {
 			type: Boolean,
 			default: true,
 		},
-		disableScroll: {
-			type: Boolean,
-			default: false,
-		},
+		// 停止事件传播
 		stopPropagation: {
 			type: Boolean,
-			default: false,
+			default: true,
 		},
+		// 在幻灯片更改时运行
+		change: {
+			style: Function,
+			default: function (index, elem) {},
+		},
+		// 在结束幻灯片转换时运行
+		transitionEnd:{
+			type: Function,
+			default: function (index, elem) {},
+		}
 
 	},
 	data () {
@@ -52,8 +67,8 @@ export default {
 				continuous: this.continuous,
 				disableScroll: this.disableScroll,
 				stopPropagation: this.stopPropagation,
-				callback: function(index, elem) {},
-				transitionEnd: function(index, elem) {}
+				callback: this.change,
+				transitionEnd: this.transitionEnd,
 			})
 		},
 	},
@@ -68,9 +83,6 @@ export default {
 .swipe__list
 	overflow: hidden
 	position: relative
-	width: 90vw
-	height: 300px
-	// border: 2px solid red
 	box-sizing: border-box
 </style>
 
