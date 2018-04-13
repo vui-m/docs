@@ -19,6 +19,7 @@ export default {
 			type: Number,
 			default: 400,
 		},
+		// 自动切换时间，0 为暂停自动切换
 		auto: {
 			type: Number,
 			default: 3000,

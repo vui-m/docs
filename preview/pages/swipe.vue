@@ -2,6 +2,7 @@
 	section
 		Swipe(
 			:continuous="continuous"
+			:auto="0"
 		)
 			Swipe-item(
 				v-for="(item, $index) in list"
