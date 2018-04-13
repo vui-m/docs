@@ -1,7 +1,13 @@
 >## vui-m
 ### A high quality UI Toolkit built on Vue 2.x.
 
-
+>#### 可用组件
+```javascript
+Toast
+Swipe
+Swipe-item
+```
+持续更新中...
 >#### 目录结构
 ```
 |———build       // webpack 配置项
