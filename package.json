@@ -11,9 +11,9 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "build": "node build/build.js",
-    "docs": "node build/docs.js",
-    "deploy": "npm run docs && gh-pages -d dist",
+    "build:npm": "node build/build.npm.pkg.js",
+    "build:preview": "node build/build.preview.js",
+    "deploy": "npm run build:preview && npm run gh:pages",
     "gh:pages": "gh-pages -d dist"
   },
   "dependencies": {

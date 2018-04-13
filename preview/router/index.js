@@ -5,10 +5,13 @@ const config = [
 	{ path: '/demo', name: 'demo' },
 	{ path: '/toast', name: 'toast' },
 	{ path: '/swipe', name: 'swipe' },
+	{ path: '/home', name: 'home' },
 ]
 
 const routes = [
 	...parseRouter(config),
+	// redirect routes
+	{ path: '/', redirect: '/home' },
 ]
 
 // 路由解析（包括多层路由）

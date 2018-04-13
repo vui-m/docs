@@ -10,9 +10,9 @@ const chalk = require('chalk')
 const webpack = require('webpack')
 const config = require('../config')
 const shell = require('shelljs')
-const webpackConfig = require('./webpack.docs.conf')
+const webpackConfig = require('./webpack.preview.conf')
 
-const spinner = ora('building for docs...')
+const spinner = ora('building for preview ...')
 spinner.start()
 
 rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
