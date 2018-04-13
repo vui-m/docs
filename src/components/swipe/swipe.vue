@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Swipe from 'root/static/js/swipe'
+import Swipe from './swipe'
 export default {
 	name: 'Swipe',
 	props: {
