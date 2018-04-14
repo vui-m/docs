@@ -1,12 +1,13 @@
 {
   "name": "vui-m",
-  "version": "0.0.16",
-  "description": "vue ui vui-m",
+  "version": "0.0.17",
+  "description": "vue ui vui-m mobile",
   "main": "dist/js/vui-m.js",
   "keywords": [
     "vue",
     "ui",
-    "vui-m"
+    "vui-m",
+    "mobile"
   ],
   "author": "gauseen",
   "repository": {

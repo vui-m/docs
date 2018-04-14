@@ -1,7 +1,6 @@
 <template lang="pug">
 	section
-		div
-			button(@click="showToast") 显示 toast
+		div.toast_btn(@click="showToast") 显示 toast
 </template>
 
 <script>
@@ -34,8 +33,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-	button
-		color: blue
-		font-size: 20px
-		outline: none
+	.toast_btn
+		line-height: 1.6em
+		font-size: 18px
+		border: 1px solid #93f
+		border-radius: 4px
+		margin-top: 20vh
+		width: 80%
+		margin-left: 10%
+
 </style>

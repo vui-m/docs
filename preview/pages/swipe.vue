@@ -2,7 +2,7 @@
 	section
 		Swipe(
 			:continuous="continuous"
-			:auto="0"
+			:auto="3600"
 		)
 			Swipe-item(
 				v-for="(item, $index) in list"
@@ -21,9 +21,9 @@ export default {
 		return {
 			continuous: true,
 			list: [
-				{content: 'item 001', color: 'green'},
+				{content: 'item 001', color: '#fc9'},
 				{content: 'item 002', color: 'yellow'},
-				{content: 'item 003', color: 'blue'},
+				{content: 'item 003', color: '#93f'},
 			]
 		}
 	},

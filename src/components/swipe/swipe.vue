@@ -27,7 +27,7 @@ export default {
 		// 无限循环
 		continuous: {
 			type: Boolean,
-			default: false,
+			default: true,
 		},
 		// 停止对该容器的任何触摸滚动页面
 		disableScroll: {
