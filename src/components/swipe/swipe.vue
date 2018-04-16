@@ -2,6 +2,13 @@
 	section.swipe__container
 		div.swipe__list
 			slot
+		div.siwpe__indicators(
+			v-if="isShowIndicators"
+		)
+			span.indicators__item(
+				v-for="(slide, $index) in slides"
+				:class="{ 'indicator__active': currentIndex === $index }"
+			)
 </template>
 
 <script>
@@ -29,6 +36,11 @@ export default {
 			type: Boolean,
 			default: true,
 		},
+		// 是否显示导航 点
+		isShowIndicators: {
+			type: Boolean,
+			default: true,
+		},
 		// 停止对该容器的任何触摸滚动页面
 		disableScroll: {
 			type: Boolean,
@@ -53,11 +65,14 @@ export default {
 	},
 	data () {
 		return {
+			slides: [],
+			currentIndex: 0,
 			swiperInstance: null,
 		}
 	},
 	mounted () {
-		this.initSwiper ()
+		this.initSwiper()
+		this.indicators()
 	},
 	methods: {
 		initSwiper () {
@@ -70,7 +85,20 @@ export default {
 				stopPropagation: this.stopPropagation,
 				callback: this.change,
 				transitionEnd: this.transitionEnd,
+				changeSlide: this.isShowIndicators ? this.changeSlide : null
 			})
+		},
+		indicators () {
+			this.slides = this.swiperInstance.getNumSlides()
+			this.currentIndex = this.swiperInstance.getPos()
+			console.log('this.slides: ', this.slides)
+		},
+		changeSlide (index, ele) {
+			this.currentIndex = index
+			// fixed bug status for 2 slide
+			if (this.slides === 2) {
+				this.currentIndex = index % 2
+			}
 		},
 	},
 }
@@ -85,5 +113,20 @@ export default {
 	overflow: hidden
 	position: relative
 	box-sizing: border-box
+.siwpe__indicators
+	position: absolute
+	left: 50%
+	bottom: 10px
+	transform: translate(-50%, 0)
+.indicators__item
+	margin: 0 2px
+	background-color: #000
+	opacity: .2
+	display: inline-block
+	height: 8px
+	width: 8px
+	border-radius: 50%
+.indicator__active
+		background-color: #fff
 </style>
 

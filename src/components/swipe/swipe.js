@@ -147,6 +147,7 @@ export default function Swipe(container, options) {
   
 	  index = to;
 	  offloadFn(options.callback && options.callback(index, slides[index]));
+	  offloadFn(options.changeSlide && options.changeSlide(index, slides[index]));
 	}
   
 	function move(index, dist, speed) {
@@ -395,6 +396,7 @@ export default function Swipe(container, options) {
 			}
   
 			options.callback && options.callback(index, slides[index]);
+			options.changeSlide && options.changeSlide(index, slides[index]);
   
 		  } else {
   
@@ -421,10 +423,10 @@ export default function Swipe(container, options) {
   
 	  },
 	  transitionEnd: function(event) {
-  
 		if (parseInt(event.target.getAttribute('data-index'), 10) == index) {
   
-		  if (delay) begin();
+			if (delay) begin();
+			// console.log('delay: ', delay)
   
 		  options.transitionEnd && options.transitionEnd.call(event, index, slides[index]);
   
