@@ -5,6 +5,8 @@ const config = [
 	{ path: '/demo', name: 'demo' },
 	{ path: '/toast', name: 'toast' },
 	{ path: '/swipe', name: 'swipe' },
+	{ path: '/popup', name: 'popup' },
+	{ path: '/action-sheet', name: 'action-sheet' },
 	{ path: '/home', name: 'home' },
 ]
 

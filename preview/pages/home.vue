@@ -24,6 +24,8 @@ export default {
 			components: [
 				{name: 'toast', url: '/toast'},
 				{name: 'swipe', url: '/swipe'},
+				{name: 'action-sheet', url: '/action-sheet'},
+				{name: 'popup', url: '/popup'},
 			],
 		}
 	}
