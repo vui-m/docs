@@ -10,23 +10,19 @@
 				v-for="(item, $index) in components"
 				:key="$index"
 			).componets__item
-				router-link(:to="item.url") {{item.name}}
+				router-link(:to="item.path") {{item.name}}
 		
 </template>
 
 <script>
+import navList from '../router/nav.conf'
 const vuiImg = require('../assets/img/vui_m_small.png')
 
 export default {
 	data () {
 		return {
 			vuiImg: vuiImg,
-			components: [
-				{name: 'toast', url: '/toast'},
-				{name: 'swipe', url: '/swipe'},
-				{name: 'action-sheet', url: '/action-sheet'},
-				{name: 'popup', url: '/popup'},
-			],
+			components: navList,
 		}
 	}
 }

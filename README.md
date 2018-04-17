@@ -8,6 +8,8 @@
 Toast
 Swipe
 Swipe-item
+ActionSheet
+Popup
 ```
 持续更新中...
 >#### 目录结构

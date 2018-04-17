@@ -1,16 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import navList from './nav.conf'
 
+// 不需要显示在 home 页
 const config = [
 	{ path: '/demo', name: 'demo' },
-	{ path: '/toast', name: 'toast' },
-	{ path: '/swipe', name: 'swipe' },
-	{ path: '/popup', name: 'popup' },
-	{ path: '/action-sheet', name: 'action-sheet' },
 	{ path: '/home', name: 'home' },
 ]
 
 const routes = [
+	...parseRouter(navList),
 	...parseRouter(config),
 	// redirect routes
 	{ path: '/', redirect: '/home' },
