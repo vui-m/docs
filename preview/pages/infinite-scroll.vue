@@ -1,55 +1,47 @@
 <template lang="pug">
-	section.infinite-scroll(
-		@scroll="handleScroll"
-	)
-		ul.infinite-scroll__list
-			li.infinite-scroll__item(v-for="(item, $index) in list") {{item}}
+	section
+		InfiniteScroll(
+			v-model="loading"
+			@load="loadMore"
+			:finished="finished"
+			:scroll-distance="10"
+		)
+			div.infinite-scroll__swapper
+				ul.infinite-scroll__list
+					li.infinite-scroll__item(v-for="(item, $index) in list") {{item}}
 </template>
 
 <script>
 export default {
 	data () {
 		return {
-			list: 20,
+			list: 5,
 			distance: 20,
-			lock: false,
+			finished: false,
+			loading: false,
 		}
 	},
 	mounted () {
-		this.init()
+
 	},
 	methods: {
-		init () {
-			let list = document.querySelector('.infinite-scroll__list')
-			console.log(this.$el, this.$el.clientHeight, list.clientHeight, document.documentElement.getBoundingClientRect())
-		},
-		handleScroll () {
-			let scroll = document.querySelector('.infinite-scroll')
-			let list = document.querySelector('.infinite-scroll__list')
-
-			let result = list.clientHeight - this.$el.clientHeight - scroll.scrollTop
-			if (!this.lock && result <= this.distance) {
-				console.log('=====================load-more')
-				this.lock = true
-				this.loadMore()
-			}
-			console.log('----', result)
-		},
 		loadMore () {
+			// this.loading = true
 			setTimeout(() => {
-				this.list += 20
-				this.lock = false
-			}, 1000)
+				this.list += 5
+				this.loading = false
+			}, 4500)
+			if (this.list > 20) {
+				this.finished = true
+			}
 		},
 	},
 }
 </script>
 
 <style lang="stylus" scoped>
-.infinite-scroll
-	height: 100vh
-	overflow: scroll
-	background-color: #efefef
+.infinite-scroll__swapper
+	border: 1px solid red
 .infinite-scroll__list
 	
 .infinite-scroll__item

@@ -5,6 +5,7 @@ import Swipe from './components/swipe'
 import SwipeItem from './components/swipe-item'
 import Popup from './components/popup'
 import ActionSheet from './components/action-sheet'
+import InfiniteScroll from './components/infinite-scroll'
 
 // css components
 import Button from './components/button'
@@ -16,6 +17,7 @@ const components = {
 	SwipeItem,
 	Popup,
 	ActionSheet,
+	InfiniteScroll,
 	// css components
 	Button,
 }
