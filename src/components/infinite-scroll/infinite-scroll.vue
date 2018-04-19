@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import { throttle } from 'src/utils/tips'
+
 export default {
 	name: 'InfiniteScroll',
 	model: {
@@ -36,7 +38,7 @@ export default {
 	},
 	data () {
 		return {
-			
+			throttleLoad: null,
 		}
 	},
 	mounted () {
@@ -56,8 +58,12 @@ export default {
 	methods: {
 		init () {
 			this.$nextTick(this.handleScroll)
+			this.throttleLoad = throttle(this.checkLoad, 100)
 		},
 		handleScroll () {
+			this.throttleLoad()
+		},
+		checkLoad () {
 			if (this.finished || this.loading) {
 				return
 			}

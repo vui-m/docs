@@ -23,3 +23,37 @@ export function isEmpty (value) {
 			return !!value
 	}
 }
+export function throttle (fn, delay) {
+	let now, lastExec, timer, context, args
+
+	let execute = function() {
+		fn.apply(context, args)
+		lastExec = now
+	}
+
+	return function() {
+		context = this
+		// console.log('throttle: ', delay, this)
+		args = arguments
+
+		now = Date.now()
+
+		if (timer) {
+			clearTimeout(timer)
+			timer = null
+		}
+
+		if (lastExec) {
+			let diff = delay - (now - lastExec)
+			if (diff < 0) {
+				execute()
+			} else {
+				timer = setTimeout(() => {
+					execute()
+				}, diff)
+			}
+		} else {
+			execute()
+		}
+	}
+}
