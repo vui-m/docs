@@ -10,6 +10,7 @@ Swipe
   Swipe-item
 ActionSheet
 InfiniteScroll
+Masker
 ```
 多谢支持，持续更新中...
 
@@ -184,8 +185,8 @@ this.$toast(options);
 | cancelText | 取消按钮的文本。若设为空字符串，则不显示取消按钮 | String | | '取消' |
 | closeOnClicelMask | 是否可以通过点击 mask 层来关闭 `actionsheet` | Boolean | | true |
 
-### InfiniteScroll 下拉无限加载
-> 下拉无限加载，瀑布流滚动加载，用于控制长列表的展示
+### InfiniteScroll 上滑无限加载
+> 上滑无限加载，瀑布流滚动加载，用于控制长列表的展示
 
 -------------
 
@@ -256,3 +257,31 @@ export default {
 
 ### 注：
 不要把 `InfiniteScroll` 组件所有子类元素的高度都写固定
+
+### Masker
+
+> 遮罩层显示
+
+------
+
+#### 例子
+
+基本用法
+
+```html
+<Masker v-model="visible">
+  <span>自定义内容</span>
+</Masker>
+```
+
+### API
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+|------|-------|---------|-------|--------|
+| v-model | 赋值一个变量，控制是否显示遮罩 | Boolean | | |
+
+### Slot
+
+#### Masker
+| name | 描述 |
+|------|--------|
+| - | 遮罩层的内容 |

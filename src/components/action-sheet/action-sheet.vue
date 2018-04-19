@@ -1,11 +1,7 @@
 <template lang="pug">
 	section
-		Popup(
-			v-model="isShowPop"
-			:closeOnClickMask="closeOnClickMask"
-		)
 		div.action-sheet__container(
-			:class="{ 'sheet__active': isShowPop }"
+			:class="{ 'sheet__active': value }"
 		)
 			ul.action-sheet__list
 				li.action-sheet__item(
@@ -14,20 +10,22 @@
 				) {{item.name}}
 			p.action-sheet__item.action-sheet__cancel(
 				v-if="cancelText"
-				@click.stop="isShowPop = false"
+				@click.stop="cancel"
 			) {{cancelText}}
 		
 
 </template>
 
 <script>
-import mixPopup from 'src/mixins/popup'
+import MaskMix from 'src/mixins/mask'
+
 import { getType } from 'src/utils/tips'
 
 export default {
 	name: 'ActionSheet',
-	mixins: [mixPopup,],
+	mixins: [MaskMix],
 	props: {
+		value: Boolean,
 		actions: {
 			type: Array,
 			default: [],
@@ -38,17 +36,21 @@ export default {
 		},
 	},
 	data () {
-		return {
-
-		}
+		return {}
 	},
 	methods: {
 		onItemClick (item, $index) {
 			if (getType(item.method) === 'function') {
 				item.method(item, $index)
 			}
-			this.isShowPop = false
+			this.cancel()
 		},
+		cancel () {
+			this.$emit('input', false)
+		},
+	},
+	watch: {
+
 	},
 	computed: {
 
