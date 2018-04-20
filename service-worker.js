@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.1.0/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "25fda381e6adb17ad0de37e63e41646a"
+    "revision": "4f92384c796cd3fe7fefa24afeed6cf9"
   },
   {
     "url": "assets/css/7.styles.54c989c2.css",
@@ -56,44 +56,52 @@ self.__precacheManifest = [
     "revision": "d647597aa31d757f0309c451f64131cd"
   },
   {
-    "url": "assets/js/6.daf4e992.js",
-    "revision": "6b87c675e34cf438976dd7aa4b2c19e3"
+    "url": "assets/js/6.dd5b6efa.js",
+    "revision": "bd59819d87f5181ed9c5fb572bcb5146"
   },
   {
-    "url": "assets/js/app.865b82b3.js",
-    "revision": "cf0aabb5c2a7c74b0015e37aaad091e1"
+    "url": "assets/js/app.cd18619b.js",
+    "revision": "9a29057463abc64d02fbf7b2826cf8c8"
   },
   {
     "url": "guide/zh-CN/ActionSheet.html",
-    "revision": "3d63a17c7d143b8c3cd7402b26eb6b3c"
+    "revision": "03ab8f7047293c41fc32fa72f4bc0c53"
   },
   {
     "url": "guide/zh-CN/GettingStarted.html",
-    "revision": "87487b1513b2dda47d555e68ed79414a"
+    "revision": "3d5d32e90c2835179378f1d2f9e7aaba"
   },
   {
     "url": "guide/zh-CN/InfiniteScroll.html",
-    "revision": "002f65a009acdb45f5e4ab1532991151"
+    "revision": "8550cadbf737523b88fca910b5faf064"
   },
   {
     "url": "guide/zh-CN/Masker.html",
-    "revision": "cc492733448bb281643a630bbae86af8"
+    "revision": "cb677340013103edd470a9015aea7798"
   },
   {
     "url": "guide/zh-CN/Swipe.html",
-    "revision": "de8f194df24d4dcde35189e664bad2e5"
+    "revision": "58def825d90e9f469b62a48c17a66b7a"
   },
   {
     "url": "guide/zh-CN/Toast.html",
-    "revision": "f15a9672dab04cd130fa49083bf830f9"
+    "revision": "5afc2af59405293ca46f0ea0596e14f0"
   },
   {
-    "url": "hero.png",
+    "url": "hero-1.png",
+    "revision": "891d93c66ceff77dfe4676ab9357bfdd"
+  },
+  {
+    "url": "hero-m.png",
     "revision": "606925906c21b60638ae64061edfcdb0"
   },
   {
+    "url": "hero.png",
+    "revision": "2310257a5c75d7ec2e1f8b0e02806904"
+  },
+  {
     "url": "index.html",
-    "revision": "d2cf83b0ef3b040e23a79fbcd102e127"
+    "revision": "1b6f6d63a46f6ba7033deaccfa94aba1"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
