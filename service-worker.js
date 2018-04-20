@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.1.0/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "ba34f94f4808867b65a1748006a5a4b5"
+    "revision": "25fda381e6adb17ad0de37e63e41646a"
   },
   {
     "url": "assets/css/7.styles.54c989c2.css",
@@ -60,32 +60,32 @@ self.__precacheManifest = [
     "revision": "6b87c675e34cf438976dd7aa4b2c19e3"
   },
   {
-    "url": "assets/js/app.ea865b19.js",
-    "revision": "b12beca0bab20002925afc25e2ad92b4"
+    "url": "assets/js/app.865b82b3.js",
+    "revision": "cf0aabb5c2a7c74b0015e37aaad091e1"
   },
   {
     "url": "guide/zh-CN/ActionSheet.html",
-    "revision": "21bdeade5ffd22a6c313e94cb0504f1f"
+    "revision": "3d63a17c7d143b8c3cd7402b26eb6b3c"
   },
   {
     "url": "guide/zh-CN/GettingStarted.html",
-    "revision": "1c49bb235a58f9a6886416ab301cf97f"
+    "revision": "87487b1513b2dda47d555e68ed79414a"
   },
   {
     "url": "guide/zh-CN/InfiniteScroll.html",
-    "revision": "e59986cfaff1a4296305e9288b9ce7a8"
+    "revision": "002f65a009acdb45f5e4ab1532991151"
   },
   {
     "url": "guide/zh-CN/Masker.html",
-    "revision": "21e5c5abaf9dfc0295bfdf80dd0aa22e"
+    "revision": "cc492733448bb281643a630bbae86af8"
   },
   {
     "url": "guide/zh-CN/Swipe.html",
-    "revision": "6c82dacdf9e405c962afc4c72e8eb2b2"
+    "revision": "de8f194df24d4dcde35189e664bad2e5"
   },
   {
     "url": "guide/zh-CN/Toast.html",
-    "revision": "905eaf2e581e0f0b0fb89b543b898ed2"
+    "revision": "f15a9672dab04cd130fa49083bf830f9"
   },
   {
     "url": "hero.png",
@@ -93,7 +93,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "27eb623692e281d83e197e8bf6223348"
+    "revision": "d2cf83b0ef3b040e23a79fbcd102e127"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
